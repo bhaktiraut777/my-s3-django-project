@@ -15,31 +15,6 @@ A Django-based web application demonstrating image upload, storage, and retrieva
 
 ---
 
-## 🗂️ Project Structure
-
-AWS_Learning/
-├── awsapp/ # Main app for S3 image handling
-│ ├── views.py # Image upload and listing logic
-│ ├── forms.py # Django form for image upload
-│ ├── templates/
-│ │ └── awsapp/
-│ │ ├── upload.html
-│ │ └── list.html
-│ └── s3_client.py # S3Client class for file operations
-├── AWS_Learning/ # Django project settings
-│ └── settings.py
-├── media/ # (If used) For local file fallback
-├── .gitignore
-├── requirements.txt
-├── manage.py
-└── README.md # You are here
-
-yaml
-Copy
-Edit
-
----
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
@@ -61,18 +36,14 @@ pip install -r requirements.txt
 🔐 Environment Variables
 Create a .env file or add these to your system environment:
 
-env
-Copy
-Edit
+
 AWS_ACCESS_KEY_ID=your-access-key
 AWS_SECRET_ACCESS_KEY=your-secret-key
 AWS_STORAGE_BUCKET_NAME=your-s3-bucket-name
 AWS_S3_REGION_NAME=your-region (e.g., us-east-1)
 Make sure your AWS IAM user has the following permissions:
 
-json
-Copy
-Edit
+
 {
   "Action": ["s3:PutObject", "s3:GetObject", "s3:ListBucket"],
   "Effect": "Allow",
@@ -107,9 +78,7 @@ list_image_urls(prefix): Lists image URLs
 generate_presigned_url(s3_key): Creates temporary download link
 
 🧪 Run Locally
-bash
-Copy
-Edit
+
 python manage.py runserver
 Then open:
 
@@ -137,13 +106,8 @@ Enable HTTPS and CORS settings if exposing images to web
 MIT License. Free to use and modify.
 
 🤝 Author
-Built by [Your Name]
-📧 your.email@example.com
-🌐 [yourwebsite.com]
-
-yaml
-Copy
-Edit
+Built by [Satish Raut]
+📧 satish.raut777@gamil.com
 
 ---
 
